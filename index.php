@@ -14,7 +14,7 @@ require_once __DIR__ . '/header.php';
     <h1>Search Flights & Hotels</h1>
 
     <!-- Flight Form -->
-    <form id="flight-form" action="search_results.php" method="get">
+    <form id="flight-form" action="/search_results.php" method="get">
       <input type="hidden" name="type" value="flights" />
 
       <div class="trip-type">
@@ -49,7 +49,7 @@ require_once __DIR__ . '/header.php';
     </form>
 
     <!-- Hotel Form -->
-    <form id="hotel-form" class="hidden" action="search_results.php" method="get">
+    <form id="hotel-form" class="hidden" action="/search_results.php" method="get">
       <input type="hidden" name="type" value="hotels">
       <input type="text" name="city" placeholder="City (e.g., New York)" required>
       <input type="date" name="checkin" required>
@@ -65,13 +65,13 @@ require_once __DIR__ . '/header.php';
   <!-- Banner Slider -->
   <section class="banner-slider">
     <div class="banner-slide">
-      <img src="assets/images/banners/banner1.jpg" alt="Travel Banner 1">
+      <img src="/assets/images/banners/banner1.jpg" alt="Travel Banner 1">
     </div>
     <div class="banner-slide">
-      <img src="assets/images/banners/banner2.jpg" alt="Travel Banner 2">
+      <img src="/assets/images/banners/banner2.jpg" alt="Travel Banner 2">
     </div>
     <div class="banner-slide">
-      <img src="assets/images/banners/banner3.jpg" alt="Travel Banner 3">
+      <img src="/assets/images/banners/banner3.jpg" alt="Travel Banner 3">
     </div>
   </section>
 
@@ -89,11 +89,6 @@ require_once __DIR__ . '/header.php';
 </main>
 
 <?php require_once __DIR__ . '/footer.php'; ?>
-
-<!-- External JS -->
-<script src="assets/js/app.js"></script>
-<script src="assets/js/search.js"></script>
-<script src="assets/js/results.js"></script>
 
 <!-- Banner Slider JS -->
 <script>

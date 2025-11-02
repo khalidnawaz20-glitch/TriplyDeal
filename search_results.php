@@ -50,11 +50,14 @@ $results = $type === 'hotels' ? $hotelResults : $flightResults;
 ?>
 
 <main class="search-results-page">
+
+  <!-- Page Header -->
   <section class="page-header">
     <h1><?php echo $type === 'hotels' ? 'Hotel Search Results' : 'Flight Search Results'; ?></h1>
     <p>Find the best options for your trip.</p>
   </section>
 
+  <!-- Filters -->
   <section class="results-filters">
     <label for="results-sort">Sort by Price:</label>
     <select id="results-sort">
@@ -73,25 +76,29 @@ $results = $type === 'hotels' ? $hotelResults : $flightResults;
     <?php endif; ?>
   </section>
 
+  <!-- Results List -->
   <section id="results-list" class="cards-container">
     <?php foreach ($results as $res) : ?>
-        <div class="result-card" 
-             data-price="<?php echo $res['price']; ?>" 
-             data-stars="<?php echo $res['stars'] ?? ''; ?>">
-            <h3><?php echo $res['title']; ?></h3>
-            <p><?php echo $res['description']; ?></p>
-            <p class="price">$<?php echo $res['price']; ?></p>
-            <button class="btn result-toggle">View Details</button>
-            <div class="result-details hidden">
-                <ul>
-                    <li><?php echo $res['details'] ?? 'Details not available'; ?></li>
-                </ul>
-                <a href="<?php echo $res['affiliate_link']; ?>" class="btn affiliate-link" target="_blank">Book Now</a>
-            </div>
+      <article class="result-card" 
+               data-price="<?php echo $res['price']; ?>" 
+               data-stars="<?php echo $res['stars'] ?? ''; ?>">
+        <h2><?php echo $res['title']; ?></h2>
+        <p><?php echo $res['description']; ?></p>
+        <p class="price">$<?php echo $res['price']; ?></p>
+        <button class="btn result-toggle">View Details</button>
+        <div class="result-details hidden">
+          <ul>
+            <li><?php echo $res['details'] ?? 'Details not available'; ?></li>
+          </ul>
+          <a href="<?php echo $res['affiliate_link']; ?>" class="btn affiliate-link" target="_blank">Book Now</a>
         </div>
+      </article>
     <?php endforeach; ?>
   </section>
+
 </main>
 
 <?php require_once __DIR__ . '/footer.php'; ?>
-<script src="assets/js/results.js"></script>
+
+<!-- JS -->
+<script src="/assets/js/results.js"></script>

@@ -1,5 +1,4 @@
 ﻿<?php
-// about.php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -7,29 +6,27 @@ $pageTitle = 'About Us - TriplyDeal';
 require_once __DIR__ . '/header.php';
 ?>
 
-<main class="container" style="padding: 20px;">
+<main class="about-page">
+
   <h1>About TriplyDeal</h1>
-  <p>TriplyDeal is your ultimate travel comparison platform. We help travelers find the best deals on flights, hotels, and travel packages worldwide.</p>
 
-  <section class="about-mission" style="margin-top: 30px;">
+  <section class="about-content">
+    <p>TriplyDeal is your smart way to book affordable flights and hotels worldwide. We partner with trusted travel providers to offer the best prices and deals. Whether you’re planning a business trip or a vacation, TriplyDeal makes it easy to find the perfect travel options.</p>
+
+    <img src="/assets/images/about/triplydeal-office.jpg" alt="TriplyDeal Team">
+
     <h2>Our Mission</h2>
-    <p>Our mission is to make travel planning simple, transparent, and affordable. We partner with leading airlines, hotels, and travel providers to bring you the best prices and experiences.</p>
-  </section>
+    <p>To simplify travel planning and make global travel accessible for everyone.</p>
 
-  <section class="about-values" style="margin-top: 30px;">
-    <h2>Our Values</h2>
+    <h2>Why Choose Us?</h2>
     <ul>
-      <li><strong>Transparency:</strong> We show real-time prices and options.</li>
-      <li><strong>Convenience:</strong> One platform for flights, hotels, and packages.</li>
-      <li><strong>Trust:</strong> We partner only with reputable travel providers.</li>
-      <li><strong>User Experience:</strong> Mobile-friendly and easy-to-use design.</li>
+      <li>🌍 Global coverage of flights and hotels</li>
+      <li>💸 Transparent pricing with no hidden fees</li>
+      <li>📅 Flexible multi-city planning</li>
+      <li>📲 Mobile-friendly and easy to use</li>
     </ul>
   </section>
 
-  <section class="about-team" style="margin-top: 30px;">
-    <h2>Meet the Team</h2>
-    <p>Our team is composed of travel enthusiasts, developers, and designers dedicated to making your travel planning seamless and enjoyable.</p>
-  </section>
 </main>
 
 <?php require_once __DIR__ . '/footer.php'; ?>

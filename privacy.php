@@ -1,5 +1,4 @@
 ﻿<?php
-// privacy.php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -7,43 +6,36 @@ $pageTitle = 'Privacy Policy - TriplyDeal';
 require_once __DIR__ . '/header.php';
 ?>
 
-<main class="container" style="padding: 20px;">
+<main class="privacy-page">
+
   <h1>Privacy Policy</h1>
-  <p>Your privacy is important to us. TriplyDeal is committed to protecting your personal information and ensuring transparency in how your data is used.</p>
 
-  <section class="privacy-section" style="margin-top: 20px;">
-    <h2>1. Information We Collect</h2>
-    <p>We may collect personal information such as your name, email address, and search preferences when you use our website or subscribe to newsletters.</p>
-  </section>
+  <section class="privacy-content">
+    <p>At TriplyDeal, your privacy is important to us. We collect and use your information only as described below.</p>
 
-  <section class="privacy-section" style="margin-top: 20px;">
-    <h2>2. How We Use Your Information</h2>
+    <h2>Information We Collect</h2>
     <ul>
-      <li>To provide and improve our services</li>
-      <li>To send promotional emails or updates if you opted in</li>
-      <li>To personalize your experience on the website</li>
+      <li>Personal information you provide (name, email, booking details)</li>
+      <li>Technical information such as IP address and browser type</li>
     </ul>
+
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>To process bookings and payments</li>
+      <li>To send confirmations and promotional offers</li>
+      <li>To improve our website and services</li>
+    </ul>
+
+    <h2>Data Security</h2>
+    <p>We implement reasonable measures to protect your information. However, no system is completely secure.</p>
+
+    <h2>Third-Party Partners</h2>
+    <p>We may share information with trusted third-party travel providers to fulfill your bookings.</p>
+
+    <h2>Changes to Privacy Policy</h2>
+    <p>We may update this policy from time to time. Continued use of the website constitutes acceptance of any changes.</p>
   </section>
 
-  <section class="privacy-section" style="margin-top: 20px;">
-    <h2>3. Sharing of Information</h2>
-    <p>We do not sell your personal information. We may share limited data with our affiliate travel partners to provide pricing and booking options.</p>
-  </section>
-
-  <section class="privacy-section" style="margin-top: 20px;">
-    <h2>4. Cookies and Tracking</h2>
-    <p>We use cookies and similar technologies to enhance your experience and analyze website traffic. You can control cookie settings in your browser.</p>
-  </section>
-
-  <section class="privacy-section" style="margin-top: 20px;">
-    <h2>5. Your Rights</h2>
-    <p>You may request access to your data, correct inaccuracies, or unsubscribe from communications at any time.</p>
-  </section>
-
-  <section class="privacy-section" style="margin-top: 20px;">
-    <h2>6. Changes to This Policy</h2>
-    <p>TriplyDeal reserves the right to update this privacy policy. Continued use of the website constitutes acceptance of any changes.</p>
-  </section>
 </main>
 
 <?php require_once __DIR__ . '/footer.php'; ?>
