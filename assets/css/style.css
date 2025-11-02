@@ -1,0 +1,227 @@
+﻿/* ========================
+   TriplyDeal - style.css
+   ======================== */
+
+/* --- Global Styles --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* --- Forms --- */
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* --- Flight/Hotel Forms --- */
+.search-form {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.trip-type {
+  margin-bottom: 15px;
+}
+.trip-type label {
+  margin-right: 15px;
+  font-weight: normal;
+}
+
+/* Multi-city flight leg */
+.flight-leg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.flight-leg input {
+  flex: 1 1 30%;
+}
+
+/* Remove leg button */
+.flight-leg .remove-leg {
+  flex: 0 0 auto;
+  background-color: #dc3545;
+}
+.flight-leg .remove-leg:hover {
+  background-color: #b52a3a;
+}
+
+/* Hidden elements */
+.hidden {
+  display: none;
+}
+
+/* --- Banner Slider --- */
+.banner-slider {
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.banner-slide {
+  display: none;
+  width: 100%;
+}
+.banner-slide img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.banner-slide.active {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* --- Promo Section --- */
+.promo {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.promo h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.promo ul {
+  list-style: none;
+  padding-left: 0;
+}
+.promo li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* --- Cards (Results, Packages, Deals) --- */
+.result-card, .package-card, .deal-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.result-card.expanded, .package-card.expanded, .deal-card.expanded {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* --- Grid Layout for Packages & Deals --- */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 20px;
+}
+
+/* --- Mobile Menu --- */
+#nav-menu {
+  display: flex;
+  gap: 15px;
+}
+#nav-menu.open {
+  display: block;
+}
+@media (max-width: 768px) {
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+  }
+}
+
+/* --- Back to Top Button --- */
+#back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
+}
+#back-to-top.visible {
+  display: block;
+}
+
+/* --- Dark Mode --- */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark-mode .btn {
+  background-color: #1e88e5;
+}
+body.dark-mode input, body.dark-mode select, body.dark-mode textarea {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: #e0e0e0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .search-form, .promo {
+    padding: 15px;
+  }
+  .trip-type label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .flight-leg input {
+    flex: 1 1 100%;
+  }
+}
